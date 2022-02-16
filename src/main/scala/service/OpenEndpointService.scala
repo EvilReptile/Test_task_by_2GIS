@@ -40,10 +40,10 @@ class OpenEndpointService()
             html <- Unmarshal(resp).to[String]
             body = Jsoup.parse(html)
         } yield {
-            body.head()
+            body.head
                 .getElementsByTag(tag)
-                .first()
-                .html()
+                .first
+                .html
         }
         
     }
